@@ -29,9 +29,10 @@ public class C03_driver_manage_methodları {
         driver.manage().window().fullscreen();
         System.out.println(driver.manage().window().getSize());
         System.out.println(driver.manage().window().getPosition());
-        driver.manage().window().minimize();
+
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.quit();
 
 
     }
