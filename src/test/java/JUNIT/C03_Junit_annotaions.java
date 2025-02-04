@@ -5,7 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.jupiter.api.*;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -29,7 +29,7 @@ public class C03_Junit_annotaions {
 
         driver.close();
     }
-    @org.junit.Test
+    @Test
     public void test01(){
 
 
@@ -38,7 +38,7 @@ public class C03_Junit_annotaions {
 
     }
 
-    @org.junit.Test
+    @Test
     @Ignore
     public void test02(){
 
