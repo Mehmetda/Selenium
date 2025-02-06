@@ -41,17 +41,28 @@ public class C02_Assertions_örnek_soru {
 
     @Test
     public void test02() {
+        Actions action = new Actions(driver);
 
         WebElement logo = driver.findElement(By.xpath("//img[@src='/static/images/home/logo.png']"));
 
         Assert.assertTrue(logo.isDisplayed());
+
         driver.findElement(By.xpath("//a[text()=' Signup / Login']")).click();
+
         WebElement doğrulamayazısı= driver.findElement(By.xpath("//h2[text()='New User Signup!']"));
+
         Assert.assertTrue(doğrulamayazısı.isDisplayed());
-        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("mehmet");
+
+        WebElement isimkutusu=driver.findElement(By.xpath("//input[@type='text']"));
+
+        action.sendKeys(isimkutusu,"mehmet").perform();
+
         driver.findElement(By.xpath("(//input[@type='email'])[2]")).sendKeys("mehmetgokmendag@gmail.com");
+
         driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
+
         WebElement doğrulamayazısı2= driver.findElement(By.xpath("//b[text()='Enter Account Information']"));
+
         Assert.assertTrue(doğrulamayazısı2.isDisplayed());
 
         driver.findElement(By.xpath("(//input[@type='radio'])[1]")).click();

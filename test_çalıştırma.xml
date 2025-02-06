@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <test name="Regression Tests">
+        <classes>
+            <class name="TESTNG.C01_TESTNG"/>
+            <class name="JUNIT.C02_Junit_annotaions">
+                <methods>
+
+                    <include name="test01"/>
+                </methods>
+            </class>
+
+
+        </classes>
+    </test>
+</suite>

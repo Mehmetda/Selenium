@@ -24,6 +24,7 @@ public class C02_Junit_annotaions {
     }
     @Test
     public void test02(){
+        System.out.println("test02");
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
